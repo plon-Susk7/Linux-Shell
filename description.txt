@@ -1,0 +1,91 @@
+Description:
+
+=>Internal Commands:
+
+1) pwd : prints full path name of current directory.
+	Test case : shell> pwd
+2) echo :  prints whatever written after it..
+	Test case : shell> echo <anything..>
+	outputs : <anything>
+3) cd : Used to change directory.
+	Test case: shell> cd <valid folder name>
+	output : enters the folder.
+4) exit : exits the shell.
+	Test case: shell> exit
+	output : exits the shell.
+
+=>External Commands:
+
+1) ls : It prints out all the files and folders of current directory.
+   Modes/Test case:
+	a) 'ls -1' prints files and folder in vertical order.
+	b) 'ls -a' prints hidden files.
+
+
+
+
+2) mkdir : This command helps to make directory.
+   modes/Test case:
+	1) 'mkdir <dir name> -v' here v stands for verbose. It prints out statement confirming the directory has been created.
+	2) 'mkdir <dir name> -i' this statement asks permission from user before creating the directory.
+
+
+	Error handling:
+
+	1) If the directory already exists it doesn't create duplicates.
+	2) If the syntax is not provided correctly it throws an error.
+
+	Error Test case:
+	shell> mkdir (This throws out an error since dir name isn't provided)
+	shell> mkdir a
+	shell> mkdir a => throws out duplication error.
+
+3) date : This command prints current date and time (local).
+   modes/testcase:
+	1) 'date -I' prints date only in format (Y/M/D)
+	2) 'date -T' prints time only in format (H/M/S)
+
+	Error handling:
+
+	1) Wrong format of input outputs nothing.
+
+4) cat : This command prints contents of a file.
+   modes/testcase:
+	1) 'cat .. -E' prints $ at the end of each line.
+	2) 'cat .. -n' prints line number before each newline.
+
+	Error handling:
+
+	1) If the syntax is not provided correctly it throws an error.
+	2) Wrong format of input outputs nothing.
+	3) If the file doesn't exist, it throws out an error.
+
+	Error Test case:
+	shell> cat (This throws out an error since file name isn't provided)
+	shell> cat pri.txt (assuming p doesn't exist=> It throws out an error)
+
+
+5) rm : This command removes files and directories.
+   modes/testcase:
+	1) 'rm ... -i' asks user for permission before deleting.
+	2) 'rm ... -v' prints out the name of files that has been deleted.
+
+	Assumption:
+
+	1) This command can delete directories as well.
+
+	Error handling:
+
+	1) If the syntax is not provided correctly it throws an error.
+	2) Wrong format of input outputs nothing.
+	3) If the file doesn't exist, it throws out an error.
+
+	Error test case:
+
+	shell> rm (This throws out an error!)
+	shell> rm pri.txt(This also throws out and error assuming pri.txt doesn't exist)
+
+
+
+
+
